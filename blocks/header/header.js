@@ -1,6 +1,3 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
-
 // media query match that indicates mobile/tablet width
 const isDesktop = window.matchMedia('(min-width: 900px)');
 
@@ -108,29 +105,66 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-  // load nav as fragment
-  const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
-  const fragment = await loadFragment(navPath);
-
-  // decorate nav DOM
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
-  while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
-
-  const classes = ['brand', 'sections', 'tools'];
-  classes.forEach((c, i) => {
-    const section = nav.children[i];
-    if (section) section.classList.add(`nav-${c}`);
-  });
-
-  const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
-  if (brandLink) {
-    brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
-  }
+  nav.innerHTML = `
+    <div class="nav-brand">
+      <a href="/" aria-label="SearchUnify home" class="brand-link">
+        <span class="brand-mark" aria-hidden="true">Q</span>
+        <span class="brand-text">Search<span>Unify</span></span>
+      </a>
+    </div>
+    <div class="nav-sections">
+      <div class="default-content-wrapper">
+        <ul>
+          <li>
+            <span>Platform</span>
+            <ul>
+              <li><a href="#">Platform Overview</a></li>
+              <li><a href="#">AI Search</a></li>
+              <li><a href="#">Analytics</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>Products</span>
+            <ul>
+              <li><a href="#">Support Search</a></li>
+              <li><a href="#">Cognitive Assistant</a></li>
+              <li><a href="#">Insights Engine</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>Industries</span>
+            <ul>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Healthcare</a></li>
+              <li><a href="#">Ecommerce</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>Resources</span>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Documentation</a></li>
+            </ul>
+          </li>
+          <li>
+            <span>Company</span>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="nav-tools">
+      <a href="#" class="book-demo-btn">Book a Demo</a>
+    </div>
+  `;
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
