@@ -4,8 +4,11 @@ header .nav-wrapper {
   left: 0;
   width: 100%;
   z-index: 10;
-  background: #fff;
-  border-bottom: 1px solid #ebebeb;
+  background:
+    linear-gradient(95deg, rgb(42 93 255 / 8%), rgb(223 47 93 / 8%)),
+    #fff;
+  border-bottom: 1px solid rgb(42 93 255 / 18%);
+  box-shadow: 0 8px 20px rgb(25 35 61 / 7%);
 }
 
 header nav {
@@ -110,15 +113,15 @@ header .nav-brand .brand-mark {
   justify-content: center;
   width: 24px;
   height: 24px;
-  border: 3px solid #f28c28;
+  border: 3px solid #2a5dff;
   border-radius: 50%;
-  color: #f28c28;
+  color: #df2f5d;
   font-size: 14px;
   font-weight: 700;
 }
 
 header .nav-brand .brand-text {
-  color: #212121;
+  color: #1d2850;
   font-size: 34px;
   letter-spacing: -0.5px;
 }
@@ -172,6 +175,7 @@ header nav .nav-sections .default-content-wrapper > ul > li > ul {
   display: none;
   margin-top: 10px;
   padding-left: 14px;
+  border-left: 2px solid rgb(42 93 255 / 30%);
 }
 
 header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
@@ -195,14 +199,15 @@ header nav .book-demo-btn {
   margin: 0;
   border-radius: 999px;
   padding: 12px 24px;
-  background: #f28c28;
+  background: linear-gradient(135deg, #2a5dff 0%, #df2f5d 100%);
   color: #fff;
   font-size: 14px;
   font-weight: 700;
+  box-shadow: 0 8px 20px rgb(42 93 255 / 28%);
 }
 
 header nav .book-demo-btn:hover {
-  background: #ea7f17;
+  background: linear-gradient(135deg, #224fe5 0%, #c42952 100%);
   color: #fff;
   text-decoration: none;
 }
@@ -249,11 +254,13 @@ header nav .book-demo-btn:hover {
     top: calc(100% + 16px);
     min-width: 210px;
     margin-top: 0;
-    border: 1px solid #e5e7eb;
+    border: 1px solid rgb(42 93 255 / 22%);
     border-radius: 10px;
     padding: 10px 14px;
-    background: #fff;
-    box-shadow: 0 10px 24px rgb(17 24 39 / 12%);
+    background:
+      linear-gradient(120deg, rgb(42 93 255 / 7%), rgb(223 47 93 / 7%)),
+      #fff;
+    box-shadow: 0 12px 24px rgb(25 35 61 / 16%);
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {

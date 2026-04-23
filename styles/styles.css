@@ -12,12 +12,12 @@
 
 :root {
   /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --background-color: #f7f9ff;
+  --light-color: #eaf1ff;
+  --dark-color: #19233d;
+  --text-color: #182138;
+  --link-color: #2a5dff;
+  --link-hover-color: #df2f5d;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -73,7 +73,10 @@
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  background:
+    radial-gradient(circle at 8% 0, rgb(42 93 255 / 14%), transparent 34%),
+    radial-gradient(circle at 92% 12%, rgb(223 47 93 / 12%), transparent 32%),
+    var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
@@ -181,8 +184,9 @@ button {
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
+  background: linear-gradient(135deg, #2a5dff 0%, #df2f5d 100%);
   color: var(--background-color);
+  box-shadow: 0 8px 18px rgb(42 93 255 / 22%);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -193,7 +197,8 @@ a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background: linear-gradient(135deg, #224fe5 0%, #c42952 100%);
+  box-shadow: 0 10px 22px rgb(223 47 93 / 24%);
   cursor: pointer;
 }
 
@@ -251,7 +256,10 @@ main > .section:first-of-type {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background:
+    linear-gradient(110deg, rgb(42 93 255 / 9%), rgb(223 47 93 / 9%)),
+    var(--light-color);
   margin: 0;
   padding: 40px 0;
 }
+
