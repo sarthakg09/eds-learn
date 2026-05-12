@@ -207,15 +207,12 @@ header nav .book-demo-btn {
   margin: 0;
   border-radius: 999px;
   padding: 12px 24px;
-  background: linear-gradient(135deg, #2a5dff 0%, #df2f5d 100%);
   color: #fff;
   font-size: 14px;
   font-weight: 700;
-  box-shadow: 0 8px 20px rgb(42 93 255 / 28%);
 }
 
 header nav .book-demo-btn:hover {
-  background: linear-gradient(135deg, #224fe5 0%, #c42952 100%);
   color: #fff;
   text-decoration: none;
 }
