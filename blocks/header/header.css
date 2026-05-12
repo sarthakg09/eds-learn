@@ -106,6 +106,8 @@ header .nav-brand .brand-link {
   gap: 8px;
   font-weight: 700;
   line-height: 1;
+  box-shadow: unset !important;
+  background-color: unset;
 }
 
 header .nav-brand .brand-link img{
