@@ -110,9 +110,8 @@ export default async function decorate(block) {
   nav.id = 'nav';
   nav.innerHTML = `
     <div class="nav-brand">
-      <a href="/" aria-label="SearchUnify home" class="brand-link">
-        <span class="brand-mark" aria-hidden="true">Q</span>
-        <span class="brand-text">Search<span>Unify</span></span>
+      <a href="https://www.searchunify.com/" aria-label="SearchUnify home" class="brand-link">
+        <img src="../assets/searchunify-logo.webp" alt="SearchUnify Logo" />
       </a>
     </div>
     <div class="nav-sections">
