@@ -32,7 +32,6 @@ header nav[aria-expanded='true'] {
 }
 
 header nav a:any-link {
-  color: #1f2937;
   text-decoration: none;
 }
 
@@ -105,6 +104,8 @@ header .nav-brand .brand-link {
   gap: 8px;
   font-weight: 700;
   line-height: 1;
+  box-shadow: 0 0 10px rgba(255, 115, 0, 0.7);
+  background-color: #ff7300;
 }
 
 header .nav-brand .brand-link img{
