@@ -20,8 +20,8 @@
   --link-hover-color: #df2f5d;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Montserrat', 'Helvetica Neue', helvetica, arial, sans-serif;
+  --heading-font-family: 'Montserrat', 'Helvetica Neue', helvetica, arial, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -78,7 +78,7 @@ body {
     radial-gradient(circle at 92% 12%, rgb(223 47 93 / 12%), transparent 32%),
     var(--background-color);
   color: var(--text-color);
-  font-family: var(--body-font-family);
+  font-family: var(--body-font-family) !important;
   font-size: var(--body-font-size-m);
   line-height: 1.6;
 }
@@ -109,7 +109,7 @@ h5,
 h6 {
   margin-top: 0.8em;
   margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
+  font-family: var(--heading-font-family) !important;
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
@@ -178,7 +178,7 @@ button {
   border: 2px solid transparent;
   border-radius: 2.4em;
   padding: 0.5em 1.2em;
-  font-family: var(--body-font-family);
+  font-family: var(--body-font-family) !important;
   font-style: normal;
   font-weight: 500;
   line-height: 1.25;

@@ -250,7 +250,8 @@ header nav .book-demo-btn:hover {
   header nav .nav-sections .default-content-wrapper > ul > li {
     position: relative;
     padding: 0;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 500;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
