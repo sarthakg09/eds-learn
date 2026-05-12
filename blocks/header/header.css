@@ -107,9 +107,14 @@ header .nav-brand .brand-link {
   line-height: 1;
 }
 
+header .nav-brand .brand-link img{
+  max-width: 178px;
+}
+
 header .nav-brand .brand-mark {
   display: inline-flex;
-  align-items: center;
+  align-items: cen
+  ter;
   justify-content: center;
   width: 24px;
   height: 24px;
