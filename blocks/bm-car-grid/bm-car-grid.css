@@ -1,0 +1,64 @@
+.bm-car-grid-skeleton { min-height: 240px; border-radius: 8px; }
+
+.bm-car-grid-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 640px) {
+  .bm-car-grid-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (width >= 1200px) {
+  .bm-car-grid-list { grid-template-columns: repeat(4, 1fr); }
+}
+
+.bm-car-grid-card {
+  border: 1px solid #dee1e6;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.bm-car-grid-card:hover {
+  box-shadow: 0 4px 12px rgb(11 15 25 / 10%);
+  transform: translateY(-2px);
+}
+
+.bm-car-grid-card-body {
+  padding: 16px;
+}
+
+.bm-car-grid-card-body h3 {
+  margin: 0 0 4px;
+  font-size: 1.125rem;
+}
+
+.bm-car-grid-card-price {
+  margin: 0 0 8px;
+  color: #5c6672;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.bm-car-grid-card-colors {
+  display: flex;
+  gap: 6px;
+}
+
+.bm-car-grid-color-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #dee1e6;
+}
+
+.bm-error-state {
+  color: #d93025;
+  padding: 16px;
+  border: 1px solid #d93025;
+  border-radius: 4px;
+  background: #fdecea;
+}

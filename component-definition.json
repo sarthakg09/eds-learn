@@ -1,0 +1,48 @@
+[
+  {
+    "title": "BM Hero",
+    "id": "bm-hero",
+    "model": "bm-hero",
+    "plugins": {
+      "da": {
+        "name": "bm-hero",
+        "rows": 8,
+        "columns": 1,
+        "fields": [
+          { "name": "image", "selector": "div:nth-child(1)" },
+          { "name": "title", "selector": "div:nth-child(2)" },
+          { "name": "subtitle", "selector": "div:nth-child(3)" },
+          { "name": "ctaPrimaryText", "selector": "div:nth-child(4)" },
+          { "name": "ctaPrimaryHref", "selector": "div:nth-child(5)" },
+          { "name": "ctaSecondaryText", "selector": "div:nth-child(6)" },
+          { "name": "ctaSecondaryHref", "selector": "div:nth-child(7)" },
+          { "name": "theme", "selector": "div:nth-child(8)" }
+        ]
+      }
+    }
+  },
+  {
+    "title": "BM Car Grid",
+    "id": "bm-car-grid",
+    "model": "bm-car-grid",
+    "plugins": { "da": { "name": "bm-car-grid", "type": "key-value-block" } }
+  },
+  {
+    "title": "BM Color Picker",
+    "id": "bm-color-picker",
+    "model": "bm-color-picker",
+    "plugins": { "da": { "name": "bm-color-picker", "type": "key-value-block" } }
+  },
+  {
+    "title": "BM Specs Table",
+    "id": "bm-specs-table",
+    "model": "bm-specs-table",
+    "plugins": { "da": { "name": "bm-specs-table", "type": "key-value-block" } }
+  },
+  {
+    "title": "BM Dealer Search",
+    "id": "bm-dealer-search",
+    "model": "bm-dealer-search",
+    "plugins": { "da": { "name": "bm-dealer-search", "type": "key-value-block" } }
+  }
+]

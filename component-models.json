@@ -1,0 +1,50 @@
+[
+  {
+    "id": "bm-hero",
+    "fields": [
+      { "component": "reference", "valueType": "string", "name": "image", "label": "Background image", "multi": false },
+      { "component": "text", "valueType": "string", "name": "title", "label": "Title" },
+      { "component": "richtext", "valueType": "string", "name": "subtitle", "label": "Subtitle" },
+      { "component": "text", "valueType": "string", "name": "ctaPrimaryText", "label": "Primary CTA label" },
+      { "component": "text", "valueType": "string", "name": "ctaPrimaryHref", "label": "Primary CTA link" },
+      { "component": "text", "valueType": "string", "name": "ctaSecondaryText", "label": "Secondary CTA label" },
+      { "component": "text", "valueType": "string", "name": "ctaSecondaryHref", "label": "Secondary CTA link" },
+      {
+        "component": "select", "valueType": "string", "name": "theme", "label": "Theme", "value": "dark",
+        "options": [
+          { "name": "Dark overlay", "value": "dark" },
+          { "name": "Light overlay", "value": "light" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bm-car-grid",
+    "fields": [
+      { "component": "text", "valueType": "string", "name": "endpoint", "label": "API Endpoint", "value": "/bm-data/cars.json" },
+      { "component": "text", "valueType": "string", "name": "categoryFilter", "label": "Category filter (suv, sedan, hatchback\u2026)" },
+      { "component": "number", "valueType": "number", "name": "limit", "label": "Max models to show", "value": 12 }
+    ]
+  },
+  {
+    "id": "bm-color-picker",
+    "fields": [
+      { "component": "text", "valueType": "string", "name": "endpoint", "label": "API Endpoint", "value": "/bm-data/cars.json" },
+      { "component": "text", "valueType": "string", "name": "modelId", "label": "Model ID (blank = first model with colors)" }
+    ]
+  },
+  {
+    "id": "bm-specs-table",
+    "fields": [
+      { "component": "text", "valueType": "string", "name": "endpoint", "label": "API Endpoint", "value": "/bm-data/cars.json" },
+      { "component": "text", "valueType": "string", "name": "modelIds", "label": "Model IDs to compare, comma-separated" },
+      { "component": "number", "valueType": "number", "name": "limit", "label": "Max models when Model IDs is blank", "value": 4 }
+    ]
+  },
+  {
+    "id": "bm-dealer-search",
+    "fields": [
+      { "component": "text", "valueType": "string", "name": "endpoint", "label": "API Endpoint", "value": "/bm-data/dealers.json" }
+    ]
+  }
+]

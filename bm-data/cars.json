@@ -1,0 +1,44 @@
+{
+  "total": 4,
+  "offset": 0,
+  "limit": 4,
+  "data": [
+    {
+      "id": "bm-tusker",
+      "name": "Beast Tusker",
+      "category": "suv",
+      "priceFrom": 1499000,
+      "currency": "INR",
+      "colors": ["#1a1a1a", "#d61f26", "#ffffff", "#5c6672"],
+      "specs": { "engine": "2.0L Turbo Petrol", "power": "180 bhp", "mileage": "14 km/l", "seating": "5", "transmission": "Automatic", "fuelType": "Petrol" }
+    },
+    {
+      "id": "bm-cyclone",
+      "name": "Beast Cyclone",
+      "category": "sedan",
+      "priceFrom": 999000,
+      "currency": "INR",
+      "colors": ["#1a1a1a", "#0b0f19", "#ffffff"],
+      "specs": { "engine": "1.5L Petrol", "power": "115 bhp", "mileage": "18 km/l", "seating": "5", "transmission": "Manual", "fuelType": "Petrol" }
+    },
+    {
+      "id": "bm-raptor",
+      "name": "Beast Raptor",
+      "category": "suv",
+      "priceFrom": 1899000,
+      "currency": "INR",
+      "colors": ["#0b0f19", "#d61f26", "#5c6672"],
+      "specs": { "engine": "2.2L Diesel", "power": "200 bhp", "mileage": "16 km/l", "seating": "7", "transmission": "Automatic", "fuelType": "Diesel" }
+    },
+    {
+      "id": "bm-falcon",
+      "name": "Beast Falcon",
+      "category": "hatchback",
+      "priceFrom": 649000,
+      "currency": "INR",
+      "colors": ["#ffffff", "#d61f26", "#1a1a1a"],
+      "specs": { "engine": "1.2L Petrol", "power": "83 bhp", "mileage": "20 km/l", "seating": "5", "transmission": "Manual", "fuelType": "Petrol" }
+    }
+  ],
+  ":type": "sheet"
+}

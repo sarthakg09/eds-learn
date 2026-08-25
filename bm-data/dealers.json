@@ -1,0 +1,13 @@
+{
+  "total": 5,
+  "offset": 0,
+  "limit": 5,
+  "data": [
+    { "id": "bm-del-01", "name": "Beast Motors Gurugram", "city": "Gurugram", "pincode": "122001", "phone": "+91-124-4000000" },
+    { "id": "bm-del-02", "name": "Beast Motors Mumbai Central", "city": "Mumbai", "pincode": "400008", "phone": "+91-22-40000000" },
+    { "id": "bm-del-03", "name": "Beast Motors Chennai OMR", "city": "Chennai", "pincode": "600096", "phone": "+91-44-40000000" },
+    { "id": "bm-del-04", "name": "Beast Motors Bengaluru Whitefield", "city": "Bengaluru", "pincode": "560066", "phone": "+91-80-40000000" },
+    { "id": "bm-del-05", "name": "Beast Motors Delhi Connaught Place", "city": "Delhi", "pincode": "110001", "phone": "+91-11-40000000" }
+  ],
+  ":type": "sheet"
+}
