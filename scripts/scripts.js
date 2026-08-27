@@ -111,7 +111,7 @@ async function loadLazy(doc) {
 }
 
 /**
- * Loads everything that happens a lot later,
+ * Loads everything that happens a lot later
  * without impacting the user experience.
  */
 function loadDelayed() {
