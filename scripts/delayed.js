@@ -1,9 +1,4 @@
-import { loadCSS } from './aem.js';
-
-async function initChatbot() {
-  await loadCSS(`${window.hlx.codeBasePath}/styles/chatbot.css`);
-  const { default: init } = await import('./chatbot.js');
-  init();
-}
-
-initChatbot();
+// Beast Motors delayed-phase scripts: analytics, non-critical embeds go
+// here. Runs late so it never competes with LCP or interactivity.
+// (Previously loaded the SearchUnify chatbot widget — removed as part of
+// the Beast Motors codebase swap; nothing delayed-phase needed yet.)

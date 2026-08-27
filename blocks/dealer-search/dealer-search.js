@@ -21,14 +21,14 @@ function filterDealers(dealers, query) {
 
 function buildResultCard(dealer) {
   const card = document.createElement('article');
-  card.className = 'bm-dealer-search-result';
+  card.className = 'dealer-search-result';
   const name = document.createElement('h3');
   name.textContent = dealer.name;
   const address = document.createElement('p');
-  address.className = 'bm-dealer-search-result-address';
+  address.className = 'dealer-search-result-address';
   address.textContent = `${dealer.city} \u2013 ${dealer.pincode}`;
   const phone = document.createElement('a');
-  phone.className = 'bm-dealer-search-result-phone';
+  phone.className = 'dealer-search-result-phone';
   phone.href = `tel:${dealer.phone}`;
   phone.textContent = dealer.phone;
   card.append(name, address, phone);
@@ -39,7 +39,7 @@ function renderResults(resultsEl, dealers) {
   resultsEl.innerHTML = '';
   if (!dealers.length) {
     const empty = document.createElement('p');
-    empty.className = 'bm-dealer-search-empty';
+    empty.className = 'dealer-search-empty';
     empty.textContent = 'No dealers found. Try a different city or PIN code.';
     resultsEl.append(empty);
     return;
@@ -55,30 +55,30 @@ export default async function decorate(block) {
 
   const endpoint = block.dataset.endpoint || DEFAULT_ENDPOINT;
 
-  block.innerHTML = '<div class="bm-dealer-search-skeleton skeleton" aria-busy="true"></div>';
+  block.innerHTML = '<div class="dealer-search-skeleton skeleton" aria-busy="true"></div>';
 
   try {
     const res = await fetch(endpoint);
-    if (!res.ok) throw new Error(`bm-dealer-search: ${endpoint} returned ${res.status}`);
+    if (!res.ok) throw new Error(`dealer-search: ${endpoint} returned ${res.status}`);
     const json = await res.json();
     const dealers = Array.isArray(json.data) ? json.data : [];
 
     block.innerHTML = '';
 
     const label = document.createElement('label');
-    label.className = 'bm-visually-hidden';
-    label.htmlFor = 'bm-dealer-search-input';
+    label.className = 'visually-hidden';
+    label.htmlFor = 'dealer-search-input';
     label.textContent = 'Find a Dealer';
 
     const input = document.createElement('input');
     input.type = 'search';
-    input.id = 'bm-dealer-search-input';
-    input.className = 'bm-input bm-dealer-search-input';
+    input.id = 'dealer-search-input';
+    input.className = 'input dealer-search-input';
     input.placeholder = 'Enter city or PIN code';
     input.setAttribute('autocomplete', 'off');
 
     const results = document.createElement('div');
-    results.className = 'bm-dealer-search-results';
+    results.className = 'dealer-search-results';
     results.setAttribute('aria-live', 'polite');
 
     const runFilter = debounce((query) => {
@@ -91,7 +91,7 @@ export default async function decorate(block) {
     renderResults(results, dealers);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('bm-dealer-search failed to load', error);
-    block.innerHTML = '<p class="bm-error-state" role="alert">We couldn\'t load dealers right now.</p>';
+    console.error('dealer-search failed to load', error);
+    block.innerHTML = '<p class="error-state" role="alert">We couldn\'t load dealers right now.</p>';
   }
 }

@@ -1,11 +1,11 @@
 [
   {
-    "title": "BM Hero",
-    "id": "bm-hero",
-    "model": "bm-hero",
+    "title": "Hero",
+    "id": "hero",
+    "model": "hero",
     "plugins": {
       "da": {
-        "name": "bm-hero",
+        "name": "hero",
         "rows": 8,
         "columns": 1,
         "fields": [
@@ -22,27 +22,27 @@
     }
   },
   {
-    "title": "BM Car Grid",
-    "id": "bm-car-grid",
-    "model": "bm-car-grid",
-    "plugins": { "da": { "name": "bm-car-grid", "type": "key-value-block" } }
+    "title": "Car Showcase Grid",
+    "id": "car-grid",
+    "model": "car-grid",
+    "plugins": { "da": { "name": "car-grid", "type": "key-value-block" } }
   },
   {
-    "title": "BM Color Picker",
-    "id": "bm-color-picker",
-    "model": "bm-color-picker",
-    "plugins": { "da": { "name": "bm-color-picker", "type": "key-value-block" } }
+    "title": "Color Visualizer",
+    "id": "color-picker",
+    "model": "color-picker",
+    "plugins": { "da": { "name": "color-picker", "type": "key-value-block" } }
   },
   {
-    "title": "BM Specs Table",
-    "id": "bm-specs-table",
-    "model": "bm-specs-table",
-    "plugins": { "da": { "name": "bm-specs-table", "type": "key-value-block" } }
+    "title": "Specs Comparison Table",
+    "id": "specs-table",
+    "model": "specs-table",
+    "plugins": { "da": { "name": "specs-table", "type": "key-value-block" } }
   },
   {
-    "title": "BM Dealer Search",
-    "id": "bm-dealer-search",
-    "model": "bm-dealer-search",
-    "plugins": { "da": { "name": "bm-dealer-search", "type": "key-value-block" } }
+    "title": "Dealer Search",
+    "id": "dealer-search",
+    "model": "dealer-search",
+    "plugins": { "da": { "name": "dealer-search", "type": "key-value-block" } }
   }
 ]

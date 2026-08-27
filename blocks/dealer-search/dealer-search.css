@@ -1,0 +1,49 @@
+.dealer-search-skeleton { min-height: 200px; border-radius: 8px; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.input {
+  font-size: 1rem;
+  padding: 10px 14px;
+  border: 1px solid #dee1e6;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.dealer-search-input {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.dealer-search-results {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (width >= 640px) {
+  .dealer-search-results { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (width >= 1200px) {
+  .dealer-search-results { grid-template-columns: repeat(3, 1fr); }
+}
+
+.dealer-search-result {
+  padding: 16px;
+  border: 1px solid #dee1e6;
+  border-radius: 8px;
+}
+
+.dealer-search-result h3 { margin: 0 0 4px; font-size: 1.125rem; }
+.dealer-search-result-address { margin: 0 0 8px; color: #5c6672; font-size: 0.875rem; }
+.dealer-search-result-phone { font-weight: 600; font-size: 0.875rem; }
+.dealer-search-empty { color: #5c6672; grid-column: 1 / -1; }

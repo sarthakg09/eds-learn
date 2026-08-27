@@ -14,10 +14,10 @@ const SPEC_FIELDS = [
 
 function buildTable(cars) {
   const wrapper = document.createElement('div');
-  wrapper.className = 'bm-specs-table-scroll';
+  wrapper.className = 'specs-table-scroll';
 
   const table = document.createElement('table');
-  table.className = 'bm-specs-table-grid';
+  table.className = 'specs-table-grid';
 
   const thead = document.createElement('thead');
   const headRow = document.createElement('tr');
@@ -60,11 +60,11 @@ export default async function decorate(block) {
   const limit = parseInt(block.dataset.limit, 10) || DEFAULT_LIMIT;
   const modelIds = block.dataset.modelIds?.split(',').map((id) => id.trim()).filter(Boolean);
 
-  block.innerHTML = '<div class="bm-specs-table-skeleton skeleton" aria-busy="true"></div>';
+  block.innerHTML = '<div class="specs-table-skeleton skeleton" aria-busy="true"></div>';
 
   try {
     const res = await fetch(endpoint);
-    if (!res.ok) throw new Error(`bm-specs-table: ${endpoint} returned ${res.status}`);
+    if (!res.ok) throw new Error(`specs-table: ${endpoint} returned ${res.status}`);
     const json = await res.json();
     let cars = Array.isArray(json.data) ? json.data : [];
     cars = modelIds?.length
@@ -72,7 +72,7 @@ export default async function decorate(block) {
       : cars.slice(0, limit);
 
     if (!cars.length) {
-      block.innerHTML = '<p class="bm-error-state" role="alert">No specifications found.</p>';
+      block.innerHTML = '<p class="error-state" role="alert">No specifications found.</p>';
       return;
     }
 
@@ -80,7 +80,7 @@ export default async function decorate(block) {
     block.append(buildTable(cars));
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('bm-specs-table failed to load', error);
-    block.innerHTML = '<p class="bm-error-state" role="alert">We couldn\'t load specifications right now.</p>';
+    console.error('specs-table failed to load', error);
+    block.innerHTML = '<p class="error-state" role="alert">We couldn\'t load specifications right now.</p>';
   }
 }

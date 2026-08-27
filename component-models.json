@@ -1,6 +1,6 @@
 [
   {
-    "id": "bm-hero",
+    "id": "hero",
     "fields": [
       { "component": "reference", "valueType": "string", "name": "image", "label": "Background image", "multi": false },
       { "component": "text", "valueType": "string", "name": "title", "label": "Title" },
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "id": "bm-car-grid",
+    "id": "car-grid",
     "fields": [
       { "component": "text", "valueType": "string", "name": "endpoint", "label": "API Endpoint", "value": "/bm-data/cars.json" },
       { "component": "text", "valueType": "string", "name": "categoryFilter", "label": "Category filter (suv, sedan, hatchback\u2026)" },
@@ -27,14 +27,14 @@
     ]
   },
   {
-    "id": "bm-color-picker",
+    "id": "color-picker",
     "fields": [
       { "component": "text", "valueType": "string", "name": "endpoint", "label": "API Endpoint", "value": "/bm-data/cars.json" },
       { "component": "text", "valueType": "string", "name": "modelId", "label": "Model ID (blank = first model with colors)" }
     ]
   },
   {
-    "id": "bm-specs-table",
+    "id": "specs-table",
     "fields": [
       { "component": "text", "valueType": "string", "name": "endpoint", "label": "API Endpoint", "value": "/bm-data/cars.json" },
       { "component": "text", "valueType": "string", "name": "modelIds", "label": "Model IDs to compare, comma-separated" },
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "id": "bm-dealer-search",
+    "id": "dealer-search",
     "fields": [
       { "component": "text", "valueType": "string", "name": "endpoint", "label": "API Endpoint", "value": "/bm-data/dealers.json" }
     ]
